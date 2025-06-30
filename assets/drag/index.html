@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Color - Kids Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script> <!-- Confetti library -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest"></script> <!-- Lottie Animation -->
+</head>
+<body>
+  <div class="background">
+    <h1>🎨 Guess the Color! 🎉</h1>
+    <p>Drag the colors to the correct names.</p>
+
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+      <p>Score: <span id="score">0</span></p>
+    </div>
+
+    <!-- Game Container -->
+    <div class="game-container">
+      <!-- Colors to Drag -->
+      <div class="colors" id="colors">
+        <div class="color-wrapper" draggable="true" id="red">
+          <div class="color-box" style="background-color: red;"></div>
+        </div>
+        <div class="color-wrapper" draggable="true" id="blue">
+          <div class="color-box" style="background-color: blue;"></div>
+        </div>
+        <div class="color-wrapper" draggable="true" id="green">
+          <div class="color-box" style="background-color: green;"></div>
+        </div>
+        <div class="color-wrapper" draggable="true" id="yellow">
+          <div class="color-box" style="background-color: yellow;"></div>
+        </div>
+        <div class="color-wrapper" draggable="true" id="purple">
+          <div class="color-box" style="background-color: purple;"></div>
+        </div>
+        <div class="color-wrapper" draggable="true" id="orange">
+          <div class="color-box" style="background-color: orange;"></div>
+        </div>
+      </div>
+
+      <!-- Dropzones -->
+      <div class="dropzones">
+        <div class="dropzone" data-color="red">Drop Red Here</div>
+        <div class="dropzone" data-color="blue">Drop Blue Here</div>
+        <div class="dropzone" data-color="green">Drop Green Here</div>
+        <div class="dropzone" data-color="yellow">Drop Yellow Here</div>
+        <div class="dropzone" data-color="purple">Drop Purple Here</div>
+        <div class="dropzone" data-color="orange">Drop Orange Here</div>
+      </div>
+    </div>
+
+    <!-- Selected Color Display -->
+    <div id="chosen-color" style="font-size: 1.5em; font-weight: bold; text-align: center; margin-top: 10px;"></div>
+
+    <!-- Celebration Animation -->
+    <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_UJNc2t.json"
+                   background="transparent"
+                   speed="1"
+                   style="width: 300px; height: 300px; display: none;"
+                   id="celebration"></lottie-player>
+
+    <!-- Final Score -->
+    <div id="final-score" style="font-size: 3em; font-weight: bold; color: #4caf50; text-align: center; display: none;">
+      Final Score: <span id="final-score-value"></span>
+    </div>
+
+    <!-- Replay Button -->
+    <button id="replay-button" style="display:none;" onclick="resetGame()">Play Again!</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Shapes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Learn Shapes</h1>
+  
+  <!-- Container for shape animation -->
+  <div class="shape-container">
+    <svg id="shape-animation"></svg>
+  </div>
+
+  <!-- Display the name of the shape -->
+  <h2 id="shape-name">Click a shape to start!</h2>
+  <h3><button id="music-toggle" onclick="toggleMusic()">Turn Music On</button></h3>
+
+
+  <!-- Buttons to show different shapes -->
+  <button onclick="showCircle()">Show Circle</button>
+  <button onclick="showSquare()">Show Square</button>
+  <button onclick="showTriangle()">Show Triangle</button>
+  <button onclick="showRectangle()">Show Rectangle</button>
+  <button onclick="showStar()">Show Star</button>
+  <button onclick="showOval()">Show Oval</button>
+  
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="music/funny-stories-for-kids-256900.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

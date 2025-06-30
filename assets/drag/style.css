@@ -1,0 +1,115 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  background: url('images/cute-cartoon-background-children_23-2150169922.avif') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: #333; 
+}
+
+/* Main Content Container with White Background */
+.background {
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* Heading Styles */
+h1 {
+  color: #333;
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+/* Paragraph Styles */
+p {
+  color: #555;
+  font-size: 18px;
+}
+
+/* Game Container Styling */
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Shapes Section */
+.shapes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 shapes per row */
+  gap: 20px;
+}
+
+/* Individual Shape Styling */
+.shape {
+  width: 100px;
+  cursor: grab;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0 auto; /* Centers the shapes */
+}
+
+/* Dropzones Section */
+.dropzones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 drop zones per row */
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+}
+
+/* Dropzone Styling */
+.dropzone {
+  width: 200px;
+  height: 100px;
+  border: 2px dashed #555;
+  border-radius: 10px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Correct Match Styling */
+.correct {
+  border-color: green;
+  background-color: #c7f9cc;
+}
+
+/* Wrong Match Styling */
+.wrong {
+  border-color: red;
+  background-color: #ffc9c9;
+}
+
+/* Replay Button Styling */
+#replay-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#replay-button:hover {
+  background-color: #e6b800;
+}
