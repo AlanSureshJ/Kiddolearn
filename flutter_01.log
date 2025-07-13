@@ -1,0 +1,116 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+FormatException: FormatException: Unexpected character (at character 1)
+../../runtime/vm/zone.cc: 96: error: Out of memory.
+^
+
+
+```
+#0      _ChunkedJsonParser.fail (dart:convert-patch/convert_patch.dart:1463:5)
+#1      _ChunkedJsonParser.parseNumber (dart:convert-patch/convert_patch.dart:1329:9)
+#2      _ChunkedJsonParser.parse (dart:convert-patch/convert_patch.dart:931:22)
+#3      _JsonStringDecoderSink.addSlice (dart:convert-patch/convert_patch.dart:1551:13)
+#4      _JsonStringDecoderSink.add (dart:convert-patch/convert_patch.dart:1556:5)
+#5      _ConverterStreamEventSink.add (dart:convert/chunked_conversion.dart:70:18)
+#6      _SinkTransformerStreamSubscription._handleData (dart:async/stream_transformers.dart:115:24)
+#7      _rootRunUnary (dart:async/zone.dart:1538:47)
+#8      _CustomZone.runUnary (dart:async/zone.dart:1429:19)
+#9      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1329:7)
+#10     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:381:11)
+#11     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:312:7)
+#12     _SinkTransformerStreamSubscription._add (dart:async/stream_transformers.dart:67:11)
+#13     _EventSinkWrapper.add (dart:async/stream_transformers.dart:13:11)
+#14     _StringAdapterSink.add (dart:convert/string_conversion.dart:228:11)
+#15     _StringAdapterSink.addSlice (dart:convert/string_conversion.dart:233:7)
+#16     _Utf8ConversionSink.addSlice (dart:convert/string_conversion.dart:313:20)
+#17     _Utf8ConversionSink.add (dart:convert/string_conversion.dart:306:5)
+#18     _ConverterStreamEventSink.add (dart:convert/chunked_conversion.dart:70:18)
+#19     _SinkTransformerStreamSubscription._handleData (dart:async/stream_transformers.dart:115:24)
+#20     _rootRunUnary (dart:async/zone.dart:1538:47)
+#21     _CustomZone.runUnary (dart:async/zone.dart:1429:19)
+#22     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1329:7)
+#23     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:381:11)
+#24     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:312:7)
+#25     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:798:19)
+#26     _StreamController._add (dart:async/stream_controller.dart:663:7)
+#27     _StreamController.add (dart:async/stream_controller.dart:618:5)
+#28     _Socket._onData (dart:io-patch/socket_patch.dart:2904:41)
+#29     _rootRunUnary (dart:async/zone.dart:1546:13)
+#30     _CustomZone.runUnary (dart:async/zone.dart:1429:19)
+#31     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1329:7)
+#32     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:381:11)
+#33     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:312:7)
+#34     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:798:19)
+#35     _StreamController._add (dart:async/stream_controller.dart:663:7)
+#36     _StreamController.add (dart:async/stream_controller.dart:618:5)
+#37     new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:2323:31)
+#38     _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:1646:14)
+#39     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#40     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#41     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:128:13)
+#42     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:195:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.29.2, on Microsoft Windows [Version 10.0.22631.5039], locale en-US) [238ms]
+    [32m•[39m Flutter version 3.29.2 on channel stable at C:\flutter\src\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision c236373904 (3 weeks ago), 2025-03-13 16:17:06 -0400
+    [32m•[39m Engine revision 18b71d647a
+    [32m•[39m Dart version 3.7.2
+    [32m•[39m DevTools version 2.42.3
+
+[33m[!][39m Windows Version (Problem detected with Windows installation) [1,470ms]
+    [33m![39m Get-Process failed to complete
+
+[33m[!][39m Android toolchain - develop for Android devices (Android SDK version 35.0.0) [1,411ms]
+    [32m•[39m Android SDK at C:\Users\alans\AppData\Local\Android\sdk
+    [32m•[39m Platform android-35-ext14, build-tools 35.0.0
+    [32m•[39m Java binary at: C:\Program Files\Java\jdk-17\bin\java
+      This JDK is specified in your Flutter configuration.
+      To change the current JDK, run: `flutter config --jdk-dir="path/to/jdk"`.
+    [32m•[39m Java version Java(TM) SE Runtime Environment (build 17.0.12+8-LTS-286)
+    [31m✗[39m Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/to/windows-android-setup for more details.
+
+[32m[✓][39m Chrome - develop for the web [31ms]
+    [32m•[39m Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[32m[✓][39m Visual Studio - develop Windows apps (Visual Studio Build Tools 2022 17.13.3) [31ms]
+    [32m•[39m Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools
+    [32m•[39m Visual Studio Build Tools 2022 version 17.13.35828.75
+    [32m•[39m Windows 10 SDK version 10.0.22621.0
+
+[32m[✓][39m Android Studio (version 2024.2) [2ms]
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio
+    [32m•[39m Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build 21.0.3+-12282718-b509.11)
+
+[32m[✓][39m VS Code (version 1.99.0) [1ms]
+    [32m•[39m VS Code at C:\Users\alans\AppData\Local\Programs\Microsoft VS Code
+    [32m•[39m Flutter extension version 3.108.0
+
+[32m[✓][39m Connected device (4 available) [1,301ms]
+    [32m•[39m sdk gphone64 x86 64 (mobile) • emulator-5554 • android-x64    • Android 15 (API 35) (emulator)
+    [32m•[39m Windows (desktop)            • windows       • windows-x64    • Microsoft Windows [Version 10.0.22631.5039]
+    [32m•[39m Chrome (web)                 • chrome        • web-javascript • Google Chrome 134.0.6998.179
+    [32m•[39m Edge (web)                   • edge          • web-javascript • Microsoft Edge 134.0.3124.93
+
+[32m[✓][39m Network resources [1,388ms]
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 2 categories.
+```
